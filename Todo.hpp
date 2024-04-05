@@ -1,3 +1,4 @@
+#include "Items.hpp"
 #include <string>
 #include <vector>
 
@@ -5,11 +6,13 @@ using namespace std;
 
 class Todolist {
 private:
-	string task;
-	bool status;
-	vector<string> liststags = {};
-	//int* ptr;
+	vector<Items> listitems;
 
 public:
-	explicit Todolist(string task, vector<string> *tags = nullptr);
+	void add(string task);
+	void complete(string task);
+	void all();
+	void complete();
+	void incomplete();
+	void clear();
 };
